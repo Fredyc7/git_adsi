@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Formulario de Registro</title>
+    <!-- Enlaces de Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+      body {
+        background-color: #1d76cf;
+      }
+      form {
+        margin-top: 50px;
+        background-color: #098ecc;
+        padding: 25px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        text-align: center;
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Formulario de Registro</h1>
+      <form>
+        <div class="form-group">
+          <label for="nombre">Nombre:</label>
+          <input type="text" class="form-control" id="nombre" name="nombre" required aria-describedby="nombreError">
+          <div id="nombreError" class="invalid-feedback">
+            Por favor, ingresa tu nombre.
+          </div>
+        </div>
+        <form>
+            <div class="form-group">
+              <label for="apellido">Apellido:</label>
+              <input type="text" class="form-control" id="apellido" apellido="apellido" required aria-describedby="apellidoError">
+              <div id="apellidoError" class="invalid-feedback">
+                Por favor, ingresa tu apellido.
+              </div>
+            </div>
+        <div class="form-group">
+          <label for="email">Correo electrónico:</label>
+          <input type="email" class="form-control" id="email" name="email" required aria-describedby="emailError">
+          <div id="emailError" class="invalid-feedback">
+            Por favor, ingresa una dirección de correo electrónico válida.
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="telefono">Teléfono:</label>
+          <input type="text" class="form-control" id="telefono" name="telefono" pattern="[0-9]{10}" required title="ingrese un número de teléfono con 10 dígitos." aria-describedby="telefonoError">
+          <div id="telefonoError" class="invalid-feedback">
+            Ingrese un número de teléfono con 10 dígitos.
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">REGISTRAR</button>
+      </form>
+    </div>
+  </body>
+</html>
